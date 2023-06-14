@@ -1,0 +1,60 @@
+<html lang="ru">
+  <head>
+    <title>Редактор предметов</title>
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+
+  <body>
+    <?php include "$root/templates/header.php";?>
+
+
+    <form style="display: flex;flex-direction: column;" method="post">
+
+      <div class="section">
+        <legend>Информация о файле</legend>
+
+        <label for="filenameInput">Название файла</label>
+        <input if="filenameInput" type="text" name="filename" value="<?=$filename?>">
+        <a href="<?=$fileLink ?>">Скачать</a>
+      </div>
+
+      <div class="section">
+        <legend>Общая информация</legend>
+
+        <label for="itemNameInput">Название предмета</label>
+        <input id="itemNameInput" type="text" name="name" placeholder="Название предмета" required value="<?=$item['name']?>">
+        
+        <label for="itemDescriptionInput">Описание предмета</label>
+        <textarea id="itemDescriptionInput" rows="10" cols="40" name="description" placeholder="Описание предмета"><?=$item['description']?></textarea>
+      </div>
+
+      <div class="section">
+        <legend>Информация о хранении</legend>
+        <div class="row">
+
+          <div class="column">
+            <label for="itemMassInput">Масса (КГ)</label>
+            <input id="itemMassInput" type="number" name="mass" placeholder="Масса в килограммах"value="<?=$item['mass']?>">
+          </div>
+
+          <div class="column">
+            <label for="itemMassInput">Объем (Л)</label>
+            <input id="itemMassInput" type="number" name="volume" placeholder="Объем в литрах"value="<?=$item['volume']?>">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="section">
+        <legend>Действия</legend>
+        <?=$htmlActionGroups?>
+
+      </div>
+
+
+      <input type="submit" value="Сохранить">
+    </form>
+
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="ru">
+  <head>
+    <title>Главная</title>
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+
+  <style>
+    li.File{
+      list-style-image: url("/resources/images/file.png");
+    }
+    li.Directory{
+      list-style-image: url("/resources/images/directory_open_file_mydocs-4.png");
+    }
+    ul{
+      padding-left: 48px;
+    }
+    
+  </style>
+
+  <body>
+    <?php include "$root/templates/header.php";?>
+
+    <div class="section">
+      <ul>
+        <?=$listOfEntries?>
+      </ul>
+    </div>
+
+    <footer></footer>
+  </body>
+</html>
