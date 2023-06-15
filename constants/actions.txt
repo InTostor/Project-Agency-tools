@@ -1,0 +1,11 @@
+attack1
+attack2
+attack3
+use1
+use2
+use3
+use4
+special1
+special2
+special3
+special4
