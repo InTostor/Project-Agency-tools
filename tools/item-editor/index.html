@@ -8,7 +8,7 @@
     <?php include "$root/templates/header.php";?>
 
 
-    <form style="display: flex;flex-direction: column;" method="post">
+    <form style="display: flex;flex-direction: column;" method="post" action="/tst.php">
 
       <div class="section">
         <legend>Информация о файле</legend>
@@ -16,6 +16,7 @@
         <label for="filenameInput">Название файла</label>
         <input if="filenameInput" type="text" name="filename" value="<?=$filename?>">
         <a href="<?=$fileLink ?>">Скачать</a>
+        <a href=".">Создать новый</a>
       </div>
 
       <div class="section">

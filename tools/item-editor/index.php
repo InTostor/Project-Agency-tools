@@ -12,6 +12,7 @@ $toolSettings = File::openJson(__DIR__."/info.json");
 $toolAssociatedStorage = "$root/storage/"."/item-editor/";
 if (!file_exists($toolAssociatedStorage))mkdir($toolAssociatedStorage);
 
+print_r($_POST);
 
 if (isset($_GET['file'])){
   $filename = $_GET['file'];
